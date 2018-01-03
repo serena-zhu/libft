@@ -6,7 +6,7 @@
 /*   By: yazhu <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:38:18 by yazhu             #+#    #+#             */
-/*   Updated: 2017/12/18 12:49:07 by yazhu            ###   ########.fr       */
+/*   Updated: 2018/01/02 22:25:13 by yazhu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	tmp = new;
 	while (lst->next)
 	{
-		if(!(tmp2 = f(lst->next)))
+		if (!(tmp2 = f(lst->next)))
 			return (NULL);
 		tmp->next = tmp2;
 		lst = lst->next;
