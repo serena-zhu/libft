@@ -77,13 +77,27 @@ The function names are prefixed by "ft_".
 
 #### `Additional Functions`
 
-| <td colspan=2>[ft_memalloc](/ft_memalloc.c)</td>|
-| <td colspan=2>----------</td> |
-| Prototype | void * ft_memalloc(size_t size); |
-| Description | Allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation
-fails, the function returns NULL. |
-| Param. #1 | The size of the memory that needs to be allocated. |
-| Return value | The allocated memory area. |
+<table>
+	<tr>
+		<td colspan="2">[ft_memalloc](/ft_memalloc.c)</td>
+	</tr>
+	<tr>
+		<td>Prototype</td>
+		<td>void * ft_memalloc(size_t size);</td>
+	</tr>
+	<tr>
+		<td>Description</td>
+		<td>Allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.</td>
+	</tr>
+	<tr>
+		<td>Param. #1</td>
+		<td>The Size of the memory that needs to be allocated.</td>
+	</tr>
+	<tr>
+		<td>Return value</td>
+		<td>The allocated memory area.</td>
+	</tr>
+</table>
 
 *
 *
