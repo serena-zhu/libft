@@ -99,7 +99,7 @@ The function names are prefixed by "ft_".
 			<td>The allocated memory area.</td>
 		</tr>
 	</table></li>
-	<li><a href="#top">↥ back to top</a></li>
+	<a href="#top">↥ back to top</a>
 	<li><table>
 		<tr>
 			<td colspan="2" align="center"><a href="ft_memdel.c">ft_memdel</a></td>
@@ -121,10 +121,10 @@ The function names are prefixed by "ft_".
 			<td>None.</td>
 		</tr>
 	</table></li>
-	<li><a href="#top">↥ back to top</a></li>
+	<a href="#top">↥ back to top</a>
 	<li><table>
 		<tr>
-			<td colspan="2" align="center"><a href="ft_strnew.c">ft_stsrnew</a></td>
+			<td colspan="2" align="center"><a href="ft_strnew.c">ft_strnew</a></td>
 		</tr>
 		<tr>
 			<td>Prototype</td>
@@ -143,7 +143,30 @@ The function names are prefixed by "ft_".
 			<td>The string allocated and initialized to 0.</td>
 		</tr>
 	</table></li>
-	<li><a href="#top">↥ back to top</a></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_strdel.c">ft_strdel</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_strdel(char **as);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string’s address that needs to be freed and its pointer set to NULL.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+
 </ul>
 
 
