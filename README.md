@@ -80,7 +80,7 @@ The function names are prefixed by "ft_".
 <ul>
 	<li><table>
 		<tr>
-			<td colspan="2"><a href="ft_memalloc.c">ft)memalloc</a></td>
+			<td colspan="2" style="text-align"><a href="ft_memalloc.c">ft_memalloc</a></td>
 		</tr>
 		<tr>
 			<td>Prototype</td>
