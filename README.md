@@ -77,8 +77,8 @@ The function names are prefixed by "ft_".
 
 #### `Additional Functions`
 
-| [ft_memalloc](/ft_memalloc.c) |
-| ---------- |
+| <td colspan=2>[ft_memalloc](/ft_memalloc.c)</td>|
+| <td colspan=2>----------</td> |
 | Prototype | void * ft_memalloc(size_t size); |
 | Description | Allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation
 fails, the function returns NULL. |
