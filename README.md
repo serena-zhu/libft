@@ -80,7 +80,7 @@ The function names are prefixed by "ft_".
 <ul>
 	<li><table>
 		<tr>
-			<td colspan="2" style="text-align"><a href="ft_memalloc.c">ft_memalloc</a></td>
+			<td colspan="2" align="center"><a href="ft_memalloc.c">ft_memalloc</a></td>
 		</tr>
 		<tr>
 			<td>Prototype</td>
@@ -97,6 +97,50 @@ The function names are prefixed by "ft_".
 		<tr>
 			<td>Return value</td>
 			<td>The allocated memory area.</td>
+		</tr>
+	</table></li>
+
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_memdel.c">ft_memdel</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_memdel(void **ap);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Takes as a parameter the address of a memory area that needs to be freed with free(3), then puts the pointer to NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>A pointer’s address that needs its memory freed and set to NULL.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_strnew.c">ft_stsrnew</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>char * ft_strnew(size_t size);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The size of the string to be allocated.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The string allocated and initialized to 0.</td>
 		</tr>
 	</table></li>
 
