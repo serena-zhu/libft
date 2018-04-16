@@ -434,7 +434,7 @@ The function names are prefixed by "ft_".
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td> Allocates (with malloc(3)) and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by spliting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow***students*", ’*’) returns the array ["hello", "fellow", "students"].</td>
+			<td>Allocates (with malloc(3)) and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by spliting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow***students*", ’*’) returns the array ["hello", "fellow", "students"].</td>
 		</tr>
 		<tr>
 			<td>Param. #1</td>
@@ -612,7 +612,7 @@ The function names are prefixed by "ft_".
 		</tr>
 	</table></li>
 	<a href="#top">↥ back to top</a>	
-	<li><table width="1000">
+	<li><table>
 		<tr>
 			<td colspan="2" align="center"><a href="ft_putendl_fd.c">ft_putendl_fd</a></td>
 		</tr>
@@ -638,7 +638,7 @@ The function names are prefixed by "ft_".
 		</tr>
 	</table></li>
 	<a href="#top">↥ back to top</a>	
-	<li><table widht="1800">
+	<li><table>
 		<tr>
 			<td colspan="2" align="center"><a href="ft_putnbr_fd.c">ft_putnbr_fd</a></td>
 		</tr>
@@ -668,8 +668,165 @@ The function names are prefixed by "ft_".
 
 #### `List Functions`
 
-*
-*
-*
+The structure of the links for the following list functions is in the [libft.h](/libft.h) file and showed below:
 
-<a href="#top">↥ back to top</a>
+```
+typedef struct 		s_list
+{
+	void 			*content;
+	size_t 			content_size;
+	struct s_list 	*next;
+}
+```
+
+<ul>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstnew.c">ft_lstnew</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>t_list * ft_lstnew(void const *content, size_t content_size);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Allocates (with malloc(3)) and returns a “fresh” link. The variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to NULL. If the allocation fails, the function returns NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The content to put in the new link.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The size of the content of the new link.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The new link.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+		<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstdelone.c">ft_lstdelone</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Takes as a parameter a link’s pointer address and frees the memory of the link’s content using the function del given as a parameter, then frees the link’s memory using free(3). The memory of next must not be freed under any circumstance. Finally, the pointer to the link that was just freed must be set to NULL (quite similar to the function ft_memdel in the mandatory part).</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The address of a pointer to a link that needs to be freed.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstdel.c">ft_lstdel</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_lstdel(t_list **alst, void (*del)(void *, size_t));</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Takes as a parameter the adress of a pointer to a link and frees the memory of this link and every successors of that link using the functions del and free(3). Finally the pointer to the link that was just freed must be set to NULL (quite similar to the function ft_memdel from the mandatory part).</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The address of a pointer to the first link of a list that needs to be freed.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstadd.c">ft_lstadd</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_lstadd(t_list **alst, t_list *new);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Adds the element new at the beginning of the list.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The address of a pointer to the first link of a list.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The link to add at the bginning of the list.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstiter.c">ft_lstiter</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_lstiter(t_list *lst, void (*f)(t_list *elem));</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Iterates the list lst and applies the function f to each link.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>A pointer to the first link of a list.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The address of a function to apply to each link of a list.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_lstmap.c">ft_lstmap</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem)); </td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Iterates a list lst and applies the function f to each link to create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>A pointer to the first link of a list.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The address of a function to apply to each link of a list.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The new list.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+</ul>
+
