@@ -612,7 +612,7 @@ The function names are prefixed by "ft_".
 		</tr>
 	</table></li>
 	<a href="#top">↥ back to top</a>	
-	<li><table width="500">
+	<li><table width="1000">
 		<tr>
 			<td colspan="2" align="center"><a href="ft_putendl_fd.c">ft_putendl_fd</a></td>
 		</tr>
@@ -638,7 +638,7 @@ The function names are prefixed by "ft_".
 		</tr>
 	</table></li>
 	<a href="#top">↥ back to top</a>	
-	<li><table widht="800">
+	<li><table widht="1800">
 		<tr>
 			<td colspan="2" align="center"><a href="ft_putnbr_fd.c">ft_putnbr_fd</a></td>
 		</tr>
