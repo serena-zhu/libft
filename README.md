@@ -402,6 +402,268 @@ The function names are prefixed by "ft_".
 		</tr>
 	</table></li>
 	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_strtrim.c">ft_strtrim</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>char * ft_strtrim(char const *s);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Allocates (with malloc(3)) and returns a copy of the string given as argument without whitespaces at the beginning or at the end of the string. Will be considered as whitespaces the following characters ’ ’, ’\n’ and ’\t’. If s has no whitespaces at the beginning or at the end, the function returns a copy of s. If the allocation fails the function returns NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to be trimed.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The “fresh” trimmed string or a copy of s.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_strsplit.c">ft_strsplit</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>char ** ft_strsplit(char const *s, char c);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td> Allocates (with malloc(3)) and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by spliting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow***students*", ’*’) returns the array ["hello", "fellow", "students"].</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to split.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The delimiter character.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The array of "fresh" strings as a result of the split.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_itoa.c">ft_itoa</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>char * ft_itoa(int n);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Allocate (with malloc(3)) and returns a “fresh” string ending with ’\0’ representing the integer n given as argument. Negative numbers must be supported. If the allocation fails, the function returns NULL.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The integer to be transformed into a string.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>The string representing the integer passed as argument.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putchar.c">ft_putchar</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putchar(char c);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the character c to the standard output.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The character output.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putstr.c">ft_putstr</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putstr(char const *s);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the string s to the standard output.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to output.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putendl.c">ft_putendl</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putendl(char const *s);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the string s to the standard output followed by a ’\n’.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to output.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putnbr.c">ft_putnbr</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putnbr(int n);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the integer n to the standard output.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The integer to output.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putchar_fd.c">ft_putchar_fd</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putchar_fd(char c, int fd);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the char c to the file descriptor fd.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The character to output.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The file descriptor.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putstr_fd.c">ft_putstr_fd</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putstr_fd(char const *s, int fd);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the string s to the file descriptor fd.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to output.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The file descriptor.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>	
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putendl_fd.c">ft_putendl_fd</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putendl_fd(char const *s, int fd);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the string s to the file descriptor fd followed by a ’\n’.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The string to output.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The file descriptor.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>	
+	<li><table>
+		<tr>
+			<td colspan="2" align="center"><a href="ft_putnbr_fd.c">ft_putnbr_fd</a></td>
+		</tr>
+		<tr>
+			<td>Prototype</td>
+			<td>void ft_putnbr_fd(int n, int fd);</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Outputs the integer n to the file descriptor fd.</td>
+		</tr>
+		<tr>
+			<td>Param. #1</td>
+			<td>The integer to output.</td>
+		</tr>
+		<tr>
+			<td>Param. #2</td>
+			<td>The file descriptor.</td>
+		</tr>
+		<tr>
+			<td>Return value</td>
+			<td>None.</td>
+		</tr>
+	</table></li>
+	<a href="#top">↥ back to top</a>	
 </ul>
 
 
