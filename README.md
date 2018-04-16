@@ -668,7 +668,7 @@ The function names are prefixed by "ft_".
 
 #### `List Functions`
 
-The structure of the links for the following list functions is in the [libft.h](/libft.h) file and showed below:
+The structure of the links for the following list functions is in the [libft.h](/libft.h) file and shown below:
 
 ```
 typedef struct 		s_list
