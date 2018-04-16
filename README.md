@@ -673,8 +673,8 @@ The structure of the links for the following list functions is in the [libft.h](
 ```
 typedef struct 		s_list
 {
-	void 			*content;
-	size_t 			content_size;
+	void 		*content;
+	size_t 		content_size;
 	struct s_list 	*next;
 }
 ```
